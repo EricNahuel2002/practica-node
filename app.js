@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 
-const indexRoutes = require('./routes/index');
+const indexRoutes = require('./routes/users');
 
 // Middleware
 app.use(express.json());
 
 // Rutas
-app.use('/', indexRoutes);
+app.use('/api/users', indexRoutes);
 
 // Servidor
 const PORT = 3000;
