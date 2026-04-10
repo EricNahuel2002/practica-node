@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 
-const indexRoutes = require('./routes/users');
+import indexRoutes from './routes/users';
 
 // Middleware
 app.use(express.json());
