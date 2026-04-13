@@ -1,4 +1,5 @@
-jest.mock('../prismaClient', () => ({
+jest.mock('../../prismaClient', () => ({
+  __esModule: true,
   default: {
     users: {
       findMany: jest.fn(),
@@ -12,15 +13,15 @@ jest.mock('../prismaClient', () => ({
 
 import { Request, Response } from 'express';
 
-const { default: prisma } = require('../prismaClient');
+import prisma from '../../prismaClient';
 
-const {
+import {
     getUsers,
     getUserById,
     createUser,
     updateUser,
     deleteUser
-} = require('../controller/userController');
+} from '../../controller/userController';
 
 describe('Users Controller con Prisma mockeado', () => {
 

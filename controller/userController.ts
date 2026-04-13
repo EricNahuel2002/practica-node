@@ -1,4 +1,4 @@
-const { default: prisma } = require('../prismaClient');
+import prisma from '../prismaClient';
 import { Request, Response } from 'express';
 
 // GET todos
