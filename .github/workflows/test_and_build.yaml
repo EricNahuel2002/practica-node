@@ -69,8 +69,8 @@ jobs:
     - name: Generate Prisma Client
       run: npx prisma generate
 
-    - name: Run migrations
-      run: npx prisma migrate deploy
+    - name: Sync database schema
+      run: npx prisma db push
       env:
         DATABASE_URL: "mysql://root:root@localhost:3306/test_db"
 
